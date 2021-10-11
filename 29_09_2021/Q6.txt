@@ -1,0 +1,72 @@
+==========================================================================================
+6. Create 2 VMs - both CentOS 7 (with fresh snapshots) with names - machineA and machineB
+	1. From machineA copy any file to machineB
+	2. From machineA - create a dir named 'testdir' on machineB
+=========================================================================================
+
+Ans:
+========
+part 1
+====================================
+on machine A ( here named localhost)
+====================================
+[someshwar@localhost ~]$ touch fileA
+[someshwar@localhost ~]$ ls
+Desktop  Documents  Downloads  fileA  Music  Pictures  Public  Templates  Videos
+[someshwar@localhost ~]$ echo " I am file from machine A ">> fileA
+[someshwar@localhost ~]$ cat fileA
+ I am file from machine A
+[someshwar@localhost ~]$scp fileA  someshwar@192.168.19.131:/home/someshwar/
+The authenticity of host '192.168.19.131 (192.168.19.131)' can't be established.
+ECDSA key fingerprint is SHA256:XfoIT5oVMlufnL1nTbXjfFx3nOeMRTxT+f9BV+8aVSY.
+ECDSA key fingerprint is MD5:e4:ef:fd:25:f9:52:15:5e:e0:94:a0:07:be:b9:ca:b2.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.19.131' (ECDSA) to the list of known hosts.
+someshwar@192.168.19.131's password:
+Permission denied, please try again.
+someshwar@192.168.19.131's password:
+fileA                                                                                  100%   27     8.2KB/s   00:00
+[someshwar@localhost ~]$
+
+-----------------
+On machine B :
+-----------------
+[someshwar@machineBcentos ~]$ pwd
+/home/someshwar
+[someshwar@machineBcentos ~]$ ls
+fileA
+[someshwar@machineBcentos ~]$
+
+========================================
+============================================================
+2. From machineA - create a dir named 'testdir' on machineB
+============================================================
+To create directory on remote machine , we can use ssh from machine A (localhost )  to machine B
+
+------------
+on machine a
+-------------
+[someshwar@localhost ~]$ ssh someshwar@192.168.19.131
+someshwar@192.168.19.131's password:
+Last failed login: Mon Oct 11 15:47:09 IST 2021 from 192.168.19.130 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Mon Oct 11 15:42:01 2021 from 192.168.19.1
+[someshwar@machineBcentos ~]$ pwd
+/home/someshwar
+[someshwar@machineBcentos ~]$ mkdir dir_created_from_machine_A
+[someshwar@machineBcentos ~]$ ls
+dir_created_from_machine_A  fileA
+[someshwar@machineBcentos ~]$ exit
+logout
+Connection to 192.168.19.131 closed.
+[someshwar@localhost ~]$
+
+
+------------
+on machine b
+-------------
+[someshwar@machineBcentos ~]$ pwd
+/home/someshwar
+[someshwar@machineBcentos ~]$ ls
+dir_created_from_machine_A  fileA
+[someshwar@machineBcentos ~]$

@@ -1,0 +1,75 @@
+========================================================
+2. Create 5 directories under /root/edac_os
+
+dir1
+dir2
+dir3
+dir4
+dir5
+
+Create the following files under each directory
+
+dir1 --> file1
+dir2 --> file2
+dir3 --> file3
+dir4 --> file4
+dir5 --> file5
+
+Create file6 and file7 under dir4
+Delete file1 under dir1
+Copy all files from dir4 to dir1
+Move all files from dir1 to dir2
+Delete file1 from dir2
+Remove all the directories except dir2
+Rename dir2 ro finaldir
+List the files under finaldir
+Each file under finaldir should have the following content - 'I'm a file under finaldir'
+==============================================================
+Answer:
+--------
+someshwar@Notebook:~$ sudo -i
+[sudo] password for someshwar:
+root@Notebook:~# cd ~
+root@Notebook:~# mkdir /root/edac_os
+root@Notebook:~# cd /root/edac_os/
+root@Notebook:~/edac_os# mkdir dir1 dir2 dir3 dir4 dir5
+root@Notebook:~/edac_os# ls
+dir1  dir2  dir3  dir4  dir5
+root@Notebook:~/edac_os#touch dir1/file1 dir2/file2 dir3/file3 dir4/file4 dir5/file5
+root@Notebook:~/edac_os# ls dir1/
+file1
+root@Notebook:~/edac_os# ls dir2/
+file2
+root@Notebook:~/edac_os# ls dir3/
+file3
+root@Notebook:~/edac_os# ls dir4/
+file4
+root@Notebook:~/edac_os# ls dir5/
+file5
+root@Notebook:~/edac_os# touch dir4/file6 dir4/file7
+root@Notebook:~/edac_os# ls dir4/
+file4  file6  file7
+root@Notebook:~/edac_os# rm dir1/file1
+root@Notebook:~/edac_os#ls dir1/
+root@Notebook:~/edac_os#cp dir4/* dir1/
+root@Notebook:~/edac_os# ls dir1/
+file4  file6  file7
+root@Notebook:~/edac_os# mv dir1/*  dir2/
+root@Notebook:~/edac_os# ls dir2/
+file2  file4  file6  file7
+root@Notebook:~/edac_os# rm dir2/file1
+rm: cannot remove 'dir2/file1': No such file or directory
+root@Notebook:~/edac_os# rm -r dir1/ dir3/ dir4/ dir5/
+root@Notebook:~/edac_os# ls
+dir2
+root@Notebook:~/edac_os# mv dir2/  finaldir/
+root@Notebook:~/edac_os# ls
+finaldir
+root@Notebook:~/edac_os#
+root@Notebook:~/edac_os# echo "'I'm a file under finaldir" >> finaldir/file2
+root@Notebook:~/edac_os# echo "'I'm a file under finaldir" >> finaldir/file
+file2  file4  file6  file7
+root@Notebook:~/edac_os# echo "'I'm a file under finaldir" >> finaldir/file4
+root@Notebook:~/edac_os# echo "'I'm a file under finaldir" >> finaldir/file6
+root@Notebook:~/edac_os# echo "'I'm a file under finaldir" >> finaldir/file7
+root@Notebook:~/edac_os#

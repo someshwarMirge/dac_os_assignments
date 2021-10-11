@@ -1,0 +1,38 @@
+========================================================
+Ques2 - Write one-liner on Type of OS with examples
+========================================================
+
+Answer:
+-----------
+
+1.Batch OS:
+------------    
+     It has an operator which has similar jobs or group of similar jobs having same requirement & group them in batches.
+    E.g.-Payroll System,Bank Statement
+
+2.Distributed OS:
+------------------  
+    It is a software over a collection  of independent networked,communicating and     physically separate computational nodes.
+    E.g.-LOCUS,Client-server etc.
+
+
+3.Network OS:
+---------------    
+    It run on a server and provide capability to manage data users,group.
+    E.g.-Unix,Linux,MacOS etc.
+
+4.RealOs:
+----------    
+    It serve real time purpose  & responds very fast.
+    E.g.-Missile Systems,ATC,Robots etc.
+
+5.Mobile Os
+-------------    
+    It is used in smartphones ,tabs,smart bands,smart watches etc.
+    Ex-Android,EmUI,MIUI,iOS,Zen-UI etc
+
+6.Multitasking Os
+--------------------    
+    -It is used to allow the user to perform more than one computer task.
+    E.g.-MacOs,Windows etc.       
+

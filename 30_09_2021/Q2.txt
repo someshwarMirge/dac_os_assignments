@@ -1,0 +1,24 @@
+===============================================================================================
+Que 2 - Given free memory partitions of 100K, 500K, 200K, 300K, and 600K (in order), how would 
+each of the First-fit, Best-fit, and Worst-fit algorithms place processes of 212K, 417K, 112K, and 426K (in 
+order)
+=================================================================================================
+Ans:
+
+•	First-fit : 
+    212K process in the memory partition of 500K (288K left)
+    417K process in the memory partition 600K (183K left)
+    122K process in the memory partition 288K (leftover of the first process 500K ? 212K fit.)
+    426K process cannot be allocated in the memory because of external fragmentation.
+ 
+•	Best-fit: 
+    212K process in the memory partition of 300K.
+    417K process in the memory partition of 500K.
+    122K process in the memory partition of 200K.
+    426K process in the memory partition of 600K.
+ 
+•	Worst-fit: 
+    212K process in the memory partition of 600K. (388K left)
+    417K process in the memory partition of 500K.  (83K left)
+    122K process in the memory partition of 388K.  (Leftover of the first process 600K? 212K fit)
+    426K process cannot be allocated in the memory because of external fragmentation.

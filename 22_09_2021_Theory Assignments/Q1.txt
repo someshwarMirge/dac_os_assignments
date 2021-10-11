@@ -1,0 +1,36 @@
+Ques1 - Difference between kernel and OS
+
+-------------------------------
+        Operating System
+-------------------------------
+1.Operating System is a system software.
+
+2.Operating System provides interface between user and hardware.
+
+3.It also provides protection and security.
+
+4.All system needs operating system to run.
+
+5. Type of operating system includes single and multiuser OS, multiprocessor OS, Realtime OS, Distributed OS.
+
+6.It is the first program to load when computer boots up.
+
+
+
+----------------------------------
+	        Kernel
+----------------------------------
+
+1.Kernel is system software which is part of operating system.
+
+2.Kernel provides interface between applications and hardware.
+
+3.It’s main purpose is memory management, disk management, process management and task management.
+
+4.All operating systems need kernel to run.
+
+5. Type of kernel includes Monolithic and Micro kernel.
+
+6.It is the first program when operating system loads.
+
+

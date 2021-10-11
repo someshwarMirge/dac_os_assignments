@@ -1,0 +1,27 @@
+==================================================================
+1. Explain Linux Directory Structure and File System Hierarchy?
+==================================================================
+
+Answer:
+-------
+
+Linux Directory Structure is Hierarchy of directory . The origin directory is called Root Directory . 
+Root Directory of File system is indicated by '/' . All the other directories fall into this Root directory . All the directories of hierarchy are as follows with their functionality .
+
+
+/bin -> It contains all the binary/executable files.
+/dev -> It contains all the device files.
+/home -> It is home directory for all users.
+/boot -> It contains files to boot the system.
+/etc -> It contains the configuration files, which can be edited by the text editor.
+/media -> It contains all mount point for external device .
+/mnt   ->  these are the temporary  mounts point , when system admin mounted temp file using them.
+/proc-> It contains all the processes files.
+/srv-> It contains service data provided by the system.
+/temp -> It contains the temporary files.
+/var -> It contains variable data files , it has admin and login  data.
+/opt -> optional software.
+/sys -> It contains system files ( hardware related or firmware related).
+/lib -> libraries .
+/usr -> user binaries and read only data , it contains application & files used bu users.
+/root -> home of root user.

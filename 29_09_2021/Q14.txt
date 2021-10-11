@@ -1,0 +1,24 @@
+=============================================================
+How to run the c program in bash
+====================================
+Ans:
+
+To run C Program in C , we need to give object file name as a shell script name while compiling it . and then we can run that shell script.
+
+ex. 
+
+c file :
+#include<stdio.h>
+int main(){
+printf("This is C file compiled to run using bash");
+return 0;
+}
+
+
+In terminal :
+
+someshwar@Notebook:~$ touch hello.c
+someshwar@Notebook:~$ vi hello.c
+someshwar@Notebook:~$ gcc hello.c -o hello.sh
+someshwar@Notebook:~$ ./hello.sh
+This is C file compiled to run using bashsomeshwar@Notebook:~$

@@ -1,0 +1,15 @@
+============================================
+Que 1 - Need of memory management?
+===========================================
+Ans:
+
+Memory Management is the process of controlling and coordinating computer memory, assigning portions known as blocks to various running programs to optimize the overall performance of the system. 
+It is the most important function of an operating system that manages primary memory. It helps processes to move back and forward between the main memory and execution disk. It helps OS to keep track of every memory location, irrespective of whether it is allocated to some process or it remains free. 
+Need
+Here, are reasons for using memory management:
+•	It allows you to check how much memory needs to be allocated to processes that decide which processor should get memory at what time. 
+•	Tracks whenever inventory gets freed or unallocated. According to it will update the status. 
+•	It allocates the space to application routines. 
+•	It also make sure that these applications do not interfere with each other. 
+•	Helps protect different processes from each other 
+•	It places the programs in memory so that memory is utilized to its full extent.    

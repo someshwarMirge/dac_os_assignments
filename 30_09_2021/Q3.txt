@@ -1,0 +1,6 @@
+====================================================================
+Que 3 - Which algorithm makes the most efficient use of memory?
+====================================================================
+Ans:
+
+Since only the Best-fit can allocate all processes in the memory, it is the best algorithm to make the most efficient use of memory.

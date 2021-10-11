@@ -1,0 +1,5 @@
+-----------------------------------
+1- How to make the alias permanent?
+------------------------------------
+
+Ans : To make alias parmanents we can chnage .bashrc file or .bash_profile so that whenever shell initiates, changes will reflect automatically.

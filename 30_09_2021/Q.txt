@@ -1,0 +1,16 @@
+===================================================
+Ques - Difference between 6,9 and 15 kill Signals.
+===================================================
+Ans:
+----------------------
+SIGABRT (kill -6) :->
+------------------------
+SIGABRT is commonly used by libc and other libraries to abort the program in case of critical errors. For example, glibc sends an SIGABRT in case of a detected double-free or other heap corruptions. Also, most assert implementations make use of SIGABRT in case of a failed assert. Furthermore, SIGABRT can be sent from any other process like any other signal. Of course, the sending process needs to run as same user or root.
+------------------------
+SIGKILL (kill -9) :->
+----------------------------
+The SIGKILL is used for immediate termination of a process. This signal cannot be ignored or blocked. The process will be terminated along with its threads (if any).It is the brutal way of killing a process and it should only be used as the last resort. Suppose you have an unresponsive process that you want to close. The SIGKILL can be used in such a case.
+------------------------
+SIGTERM (kill -15) :->
+------------------------
+In UNIX-like systems, the SIGTERM signal is used for terminating a program. You can pretty much guess that from its name which is made up of SIGnal and TERMinate. The SIGTERM can also be referred as soft kill because the process that receives the SIGTERM signal may choose to ignore it. In other words, it’s the polite way of killing a process.

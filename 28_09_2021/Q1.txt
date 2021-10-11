@@ -1,0 +1,14 @@
+===================================================
+Ques - Explain the second field in ps -elf output?
+====================================================
+Ans:
+
+The STAT column in the ps command output shows you the current status of the process
+Common States are:
+S- sleeping
+R- running
+I- idle
+D- Uninterruptible sleep
+T-­ Stopped
+X- dead
+Z- zombie
